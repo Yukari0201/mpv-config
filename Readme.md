@@ -75,10 +75,17 @@ include="~~/profiles.conf"
 
 排序不分先后，但我可能会把 相关联/风格类似 的放在一块儿
 
-- 开发者 hassn 用过的配置，[已过时](https://github.com/haasn/gentoo-conf#readme) https://github.com/haasn/gentoo-conf/blob/xor/home/nand/.mpv/config
+- 开发者 hassn 用过的配置（[已过时](https://github.com/haasn/gentoo-conf#readme)） https://github.com/haasn/gentoo-conf/blob/xor/home/nand/.mpv/config
 - 开发者 Argon- 的个人配置 https://github.com/Argon-/mpv-config
 - hooke007 - MPV_lazy 配置文件中文注释 https://github.com/hooke007/MPV_lazy/blob/main/portable_config/mpv.conf
 - dyphire https://github.com/dyphire/mpv-config
 - FinnRaze https://github.com/FinnRaze/mpv-player-config
 - GreatRunoob https://github.com/GreatRunoob/mpv-configuration
 - ...
+
+## TODOs
+
+兼容 Windows（  
+某人转到 Linux 就过河拆桥了（（（  
+
+~~同时避免出现 [`d56a04b`](https://github.com/Yukari0201/mpv-config/commit/d56a04b6bf0ef649524fa46b0f795c737f0165c1) 这样智障的错误~~
