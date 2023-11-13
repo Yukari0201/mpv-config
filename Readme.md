@@ -28,12 +28,12 @@ include="~~/profiles.conf"
 
 | 名称 | 链接 |
 | --- | --- |
-| Anime4K | https://github.com/bloc97/Anime4K
-| ACNet | https://github.com/TianZerL/ACNetGLSL
-| KrigBilateral | https://gist.github.com/igv/a015fc885d5c22e6891820ad89555637
-| AMD-FSR | https://gist.github.com/agyild/82219c545228d70c5604f865ce0b0ce5
-| acme-0.5x.hook | https://gist.github.com/bjin/15f307e7a1bdb55842bbb663ee1950ed
-| antiring.hook | https://github.com/haasn/gentoo-conf/blob/xor/home/nand/.mpv/shaders/antiring.hook
+| Anime4K | https://github.com/bloc97/Anime4K |
+| ACNet | https://github.com/TianZerL/ACNetGLSL |
+| KrigBilateral | https://gist.github.com/igv/a015fc885d5c22e6891820ad89555637 |
+| AMD-FSR | https://gist.github.com/agyild/82219c545228d70c5604f865ce0b0ce5 |
+| acme-0.5x.hook | https://gist.github.com/bjin/15f307e7a1bdb55842bbb663ee1950ed |
+| 已弃用 ~~antiring.hook~~ | ~~https://github.com/haasn/gentoo-conf/blob/xor/home/nand/.mpv/shaders/antiring.hook~~ |
 
 ### 用到的脚本
 
@@ -46,7 +46,7 @@ include="~~/profiles.conf"
 | [quality-menu](https://github.com/christoph-heinrich/mpv-quality-menu) | 运行时更改在线音视频流质量的菜单 | 在 mpv.conf 中写一行 `--script-opts-append=ytdl_hook-all_formats=yes` 可以部分代替这个脚本，参见 https://mpv.io/manual/master/#options-all-formats |
 | [file-browser](https://github.com/CogentRedTester/mpv-file-browser) | 简单的文件浏览器 | 需要自行配置 scripts-opts/file_browser.conf 中的 root=，详见：https://github.com/CogentRedTester/mpv-file-browser/blob/master/file_browser.conf |
 
-#### （个人）不常用的脚本，考虑未来移除/已移除
+#### 曾经用过但不常用的脚本，已移除/考虑未来移除
 
 | 脚本 | 用途 | 补充说明 |
 | ---- | ---- | ------- |
