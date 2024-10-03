@@ -1,4 +1,4 @@
--- quality-menu 4.1.1 - 2023-Oct-22
+-- quality-menu 4.1.2 - 2024-Sep-23
 -- https://github.com/christoph-heinrich/mpv-quality-menu
 --
 -- Change the stream video and audio quality on the fly.
@@ -569,7 +569,7 @@ local function download_formats(url)
     local ytdl_format = mp.get_property('ytdl-format')
     local raw_options = mp.get_property_native('ytdl-raw-options')
     local command = { ytdl.path, '--no-warnings', '--no-playlist', '-J' }
-    if ytdl_format and #ytdl_format > 0 then
+    if ytdl_format and #ytdl_format > 0 and ytdl_format ~= 'ytdl' then
         command[#command + 1] = '-f'
         command[#command + 1] = ytdl_format
     end
@@ -748,7 +748,7 @@ local function text_menu_open(formats, active_format, menu_type)
         local clip_top = math.floor(margin_top * height + 0.5)
         local clip_bottom = math.floor((1 - margin_bottom) * height + 0.5)
         local clipping_coordinates = '0,' .. clip_top .. ',' .. width .. ',' .. clip_bottom
-        ass:append('{\\rDefault\\q2\\clip(' .. clipping_coordinates .. ')}' .. opts.style_ass_tags)
+        ass:append('{\\rDefault\\an7\\q2\\clip(' .. clipping_coordinates .. ')}' .. opts.style_ass_tags)
 
         if #formats > 0 then
             for i, format in ipairs(formats) do

@@ -1,59 +1,69 @@
 # mpv-config
 
-本仓库包含我正在使用的 mpv 配置，
+个人自用 mpv 配置（目前边用边改）
 
-目前来说，仅仅是供我个人使用，很多地方还不完善。  
-
-## mpv.conf
+## [mpv.conf](./mpv.conf)
 
 最初是基于 [MPV_lazy main分支](https://github.com/hooke007/MPV_lazy/blob/main/portable_config/mpv.conf) 魔改而来。
 
-### profiles.conf
+### [profiles.conf](./profiles.conf)
 
 mpv.conf
 
 ```conf
-include="~~/profiles.conf"
+include = "~~/profiles.conf"
 ```
 
 用来放置 普通 profile 和 auto profile，避免干扰到默认配置
 
-## input.conf
+## [input.conf](./input.conf)
 
-没什么特别的改动
+只是加了着色器相关的内容，以及一点点个性化改动
 
-## 着色器、脚本
+## 着色器 脚本
 
-### 用到的着色器
+### 用到的[着色器](./shaders/)
 
 | 名称 | 链接 |
 | --- | --- |
 | Anime4K | https://github.com/bloc97/Anime4K |
-| ACNet | https://github.com/TianZerL/ACNetGLSL |
+| igv-FSRCNN | https://github.com/igv/FSRCNN-TensorFlow |
 | KrigBilateral | https://gist.github.com/igv/a015fc885d5c22e6891820ad89555637 |
-| AMD-FSR | https://gist.github.com/agyild/82219c545228d70c5604f865ce0b0ce5 |
 | acme-0.5x.hook | https://gist.github.com/bjin/15f307e7a1bdb55842bbb663ee1950ed |
-| 已弃用 ~~antiring.hook~~ | ~~https://github.com/haasn/gentoo-conf/blob/xor/home/nand/.mpv/shaders/antiring.hook~~ |
 
-### 用到的脚本
+<details>
+<summary><strong><code>[点击展开] 曾经用过但不常用的着色器，已移除/考虑未来移除</code></strong></summary>
+
+| 名称 | 链接 |
+| --- | --- |
+| ACNet | https://github.com/TianZerL/ACNetGLSL |
+| AMD-FSR | https://gist.github.com/agyild/82219c545228d70c5604f865ce0b0ce5 |
+| ~~antiring.hook~~ | https://github.com/haasn/gentoo-conf/blob/xor/home/nand/.mpv/shaders/antiring.hook |
+
+</details>
+
+### 用到的[脚本](./scripts/)
 
 | 脚本 | 用途 | 补充说明 |
 | ---- | ---- | ------- |
-| [autoload](https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) | 自动添加同目录的文件到播放列表 | Playlistmanager 可以代替 autoload，参见 [playlistmanager.conf](https://github.com/jonniek/mpv-playlistmanager/blob/master/playlistmanager.conf) 中的 `loadfiles_on_start` 和 `key_loadfiles` |
-| [Playlistmanager](https://github.com/jonniek/mpv-playlistmanager) | 播放列表增强 | 我同时保留两者是因为有时会拿 mpv 当音乐播放器和图片浏览器，autoload 用来加载 视频，Playlistmanager 绑快捷键用来加载图片和音频 |
+| [Playlistmanager](https://github.com/jonniek/mpv-playlistmanager) | 播放列表增强 |  |
 | [osc.lua](https://github.com/po5/thumbfast/blob/vanilla-osc/player/lua/osc.lua) |（见下） | 仅仅是 [mpv的内置OSC](https://github.com/mpv-player/mpv/blob/master/player/lua/osc.lua) 添加了 thumbfast 支持 |
-| [thumbfast](https://github.com/po5/thumbfast) | 在进度条上显示视频缩略图 | _ |
+| [thumbfast](https://github.com/po5/thumbfast) | 在进度条上显示视频缩略图 |  |
 | [quality-menu](https://github.com/christoph-heinrich/mpv-quality-menu) | 运行时更改在线音视频流质量的菜单 | 在 mpv.conf 中写一行 `--script-opts-append=ytdl_hook-all_formats=yes` 可以部分代替这个脚本，参见 https://mpv.io/manual/master/#options-all-formats |
-| [file-browser](https://github.com/CogentRedTester/mpv-file-browser) | 简单的文件浏览器 | 需要自行配置 scripts-opts/file_browser.conf 中的 root=，详见：https://github.com/CogentRedTester/mpv-file-browser/blob/master/file_browser.conf |
+| [file-browser](https://github.com/CogentRedTester/mpv-file-browser) | 简单的文件浏览器 | 需手动在 `~~/scripts` 目录（在Linux上可以 `cd ~/.config/mpv/scripts`）运行 `git clone https://github.com/CogentRedTester/mpv-file-browser.git file-browser` 以“安装” <br> 以后更新在 `~~/scripts/file-browser` 目录运行 `git pull` 即可 <br> --- <br> 如果和我一样想用 Git 来备份配置文件，请参考Git官方文档 [7.11 Git 工具 - 子模块](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97) <br> --- <br> 需要自行配置 scripts-opts/file_browser.conf 中的 root=，详见：https://github.com/CogentRedTester/mpv-file-browser/blob/master/docs/file_browser.conf |
 
-#### 曾经用过但不常用的脚本，已移除/考虑未来移除
+<details>
+<summary><strong><code>[点击展开] 曾经用过但不常用的脚本，已移除/考虑未来移除</code></strong></summary>
 
 | 脚本 | 用途 | 补充说明 |
 | ---- | ---- | ------- |
-| [bilibiliAssert](https://github.com/itKelis/MPV-Play-BiliBili-Comments) | 将B站xml格式弹幕转换为ass格式 | 需要 [Play-With-MPV](https://github.com/LuckyPuppy514/Play-With-MPV)，但我看在线视频时使用 yt-dlp 方案，不想使用该方案 |
-| [webm](https://github.com/ekisu/mpv-webm) | 用于裁剪视频片段 | 输出文件较大时性能表现不理想；我不常用 |
-| [webm-zh](https://github.com/FinnRaze/mpv-webm-zh) | webm 的汉化版 | 同上 |
-| [webtorrent-mpv-hook](https://github.com/mrxdst/webtorrent-mpv-hook) | 让 mpv 实现 torrent 边下边播 | 该 js 脚本相比于其他脚本略显麻烦 |
+| [~~autoload~~](https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) | 自动添加同目录的文件到播放列表 | 已被 [`--autocreate-playlist`](https://mpv.io/manual/master/#options-autocreate-playlist) 代替 <br> --- <br> Playlistmanager 可以代替 autoload，参见 [playlistmanager.conf](https://github.com/jonniek/mpv-playlistmanager/blob/master/playlistmanager.conf) 中的 `loadfiles_on_start` 和 `key_loadfiles` <br> |
+| [~~bilibiliAssert~~](https://github.com/itKelis/MPV-Play-BiliBili-Comments) | 将B站xml格式弹幕转换为ass格式 | 需要 [Play-With-MPV](https://github.com/LuckyPuppy514/Play-With-MPV)，但我看在线视频时使用 yt-dlp 方案，不想使用该方案 |
+| [~~webm~~](https://github.com/ekisu/mpv-webm) | 用于裁剪视频片段 | 输出文件较大时性能表现不理想；我不常用 |
+| [~~webm-zh~~](https://github.com/FinnRaze/mpv-webm-zh) | webm 的汉化版 | 同上 |
+| [~~webtorrent-mpv-hook~~](https://github.com/mrxdst/webtorrent-mpv-hook) | 让 mpv 实现 torrent 边下边播 | 该 js 脚本相比于其他脚本略显麻烦 |
+
+</details>
 
 ---
 
