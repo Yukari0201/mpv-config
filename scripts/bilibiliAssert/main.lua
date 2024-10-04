@@ -7,11 +7,11 @@ local options = require 'mp.options'
 
 local o = {
 	--弹幕字体
-	fontname = "sans-serif",
+	fontname = "Noto Sans CJK SC",
 	--弹幕字体大小 
-	fontsize = "50",
+	fontsize = "40",
 	--弹幕不透明度(0-1)
-	opacity = "0.95",
+	opacity = "0.60",
 	--滚动弹幕显示的持续时间 (秒)
 	duration_marquee = "10",
 	--静止弹幕显示的持续时间 (秒)
