@@ -1,88 +1,22 @@
-### ------- 说明 ------- ###
+# Windows 用户需要修改的地方
 
-# 个人对 mpv 的默认快捷键 的改动相对较少
-## mpv 的默认快捷键可以从这个链接获取 https://github.com/mpv-player/mpv/blob/master/etc/input.conf
-## 或者 shinchiro 编译版的 \doc\mpbindings.png
+##  [mpv.conf](./mpv.conf)
 
-# input.conf 注释部分基本和 主设置文件(mpv.conf) 相同，不重复说明了
+将 `profile = Linux` 改为 `profile = Windows`
+```conf
+# 我在 ~~/profiles.conf 中写了 [Linux] 和 [Windows] 两个 profile
+# 以方便双系统之间切换
+profile = Linux
+```
 
+## [input.conf](./input.conf)
 
+注释 `## A4K Linux` 至 `## A4K Linux End` 之间的行  
+取消注释 `## A4K Windows` 至 `## A4K Windows End` 之间的行
 
-UP    seek -60                          # seek 1 minute backward
-DOWN  seek  60                          # seek 1 minute forward
-PGUP  add chapter -1                    # seek to the previous chapter
-PGDWN add chapter  1                    # seek to the next chapter
-Shift+UP    no-osd seek -5 exact        # seek exactly 5 seconds backward
-Shift+DOWN  no-osd seek  5 exact        # seek exactly 5 seconds forward
-Shift+PGUP  seek -600                   # seek 10 minutes backward
-Shift+PGDWN seek  600                   # seek 10 minutes forward
+提示：如果你使用 VSCode/VSCodium 你可以使用 `CTRL+/` 快速注释或取消注释
 
-
-# 切换视频解码模式
-Ctrl+h cycle-values hwdec "auto" "auto-copy" "no"
-
-# 切换窗口最大化
-ctrl+m cycle window-maximized
-
-
-### 脚本 ###
-
-# * Playlistmanager
-# 参见 playlistmanager.conf 的 key_loadfiles
-# l 原本绑定 A-B循环
-l script-binding playlistmanager/loadfiles
-
-# *quality-menu
-n     script-binding quality_menu/video_formats_toggle
-N     script-binding quality_menu/audio_formats_toggle
-
-
-
-## 切换 vo=gpu/gpu-next
-Ctrl+Alt+v cycle-values vo "gpu" "gpu-next"
-                                        # 切换视频输出驱动
-
-### 音频 ###
-a cycle audio-exclusive                 # 切换音频独占（独占模式“经常”会“偶尔”出小问题。。。）
-
-
-### 字幕 ###
-# 循环次字幕
-k cycle secondary-sid
-K cycle secondary-sid down
-# 让 ASS字幕显示在黑边上，详见 [ASS2margins]
-Alt+s apply-profile ASS2margins; show-text "让ASS字幕显示在黑边上"
-Alt+S apply-profile ASS2margins restore; show-text "ASS->margins restore"
-
-
-### 画质相关 ###
-# * 去瑕疵
-Ctrl+b cycle deband                     # deband 去色带
-# 并未改变 mpv 默认的键位，只是多绑定了一个
-Ctrl+d cycle deinterlace                # deinterlacing 反交错
-
-
-
-### 音视频滤镜 ##
-
-# * 让弹幕更流畅
-# !注意! 和补帧类滤镜冲突
-# 强制视频以指定帧率输出
-Ctrl+Alt+t vf toggle lavfi="fps=fps=60/1.001"
-# 帧混合（线性插值），需要 -copy模式硬解/软解
-Ctrl+Alt+T vf toggle lavfi="framerate=fps=60/1.001"; no-osd set hwdec auto-copy
-
-
-
-### 着色器 ###
-
-# * 清空着色器列表
-CTRL+` no-osd change-list glsl-shaders clr ""; show-text "GLSL shaders cleared"
-
-# 见 [UHD2FHD]
-Alt+( apply-profile UHD2FHD; show-text "apply UHD->FHD"
-Alt+9 apply-profile UHD2FHD restore; show-text "UHD->FHD restore"
-
+```conf
 # * Anime4K
 
 ## A4K Linux
@@ -124,16 +58,4 @@ CTRL+7 no-osd change-list glsl-shaders set "~~/shaders/Anime4K_Clamp_Highlights.
 # CTRL+& no-osd change-list glsl-shaders set "~~/shaders/Anime4K_Clamp_Highlights.glsl;~~/shaders/Anime4K_Upscale_CNN_x2_VL.glsl;~~/shaders/Anime4K_AutoDownscalePre_x2.glsl;~~/shaders/Anime4K_AutoDownscalePre_x4.glsl;~~/shaders/Anime4K_Upscale_CNN_x2_M.glsl"; show-text "Anime4K: Mode D (HQ)"
 # CTRL+7 no-osd change-list glsl-shaders set "~~/shaders/Anime4K_Clamp_Highlights.glsl;~~/shaders/Anime4K_Upscale_CNN_x2_M.glsl;~~/shaders/Anime4K_AutoDownscalePre_x2.glsl;~~/shaders/Anime4K_AutoDownscalePre_x4.glsl;~~/shaders/Anime4K_Upscale_CNN_x2_S.glsl"; show-text "Anime4K: Mode D (Fast)"
 ## A4K Windows End
-
-# * ACNet
-# Ctrl+8 change-list glsl-shaders set "~~/shaders/ACNet/ACNet.glsl"
-
-# * FSR
-# 感觉在在中高性能设备上用处不大
-# Ctrl+0 change-list glsl-shaders set "~~/shaders/FSR.glsl"
-
-# * FSRCNNX 
-Ctrl+0 change-list glsl-shaders set "~~/shaders/FSRCNNX_x2_8-0-4-1.glsl"
-
-# * KrigBilateral
-Ctrl+Alt+c change-list glsl-shaders toggle "~~/shaders/KrigBilateral.glsl"
+```

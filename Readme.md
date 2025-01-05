@@ -2,6 +2,10 @@
 
 个人自用 mpv 配置（目前边用边改）
 
+主要用于 Arch Linux  
+
+Windows 用户请看 [Windows 用户需要修改的地方](Windows.md)
+
 ## [mpv.conf](./mpv.conf)
 
 最初是基于 [MPV_lazy main分支](https://github.com/hooke007/MPV_lazy/blob/main/portable_config/mpv.conf) 魔改而来。
@@ -92,10 +96,3 @@ include = "~~/profiles.conf"
 - FinnRaze https://github.com/FinnRaze/mpv-player-config
 - GreatRunoob https://github.com/GreatRunoob/mpv-configuration
 - ...
-
-## TODOs
-
-兼容 Windows（  
-某人转到 Linux 就过河拆桥了（（（  
-
-~~同时避免出现 [`d56a04b`](https://github.com/Yukari0201/mpv-config/commit/d56a04b6bf0ef649524fa46b0f795c737f0165c1) 这样智障的错误~~
