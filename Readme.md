@@ -22,7 +22,11 @@ include = "~~/profiles.conf"
 
 ## [input.conf](./input.conf)
 
-只是加了着色器相关的内容，以及一点点个性化改动
+只是加了着色器相关的内容，以及亿点点个性化改动（
+
+## 字体
+
+我的配置文件用到了 [腾祥嘉丽大圆GB18030](https://pan.acgrip.com/?dir=%E8%B6%85%E7%BA%A7%E5%AD%97%E4%BD%93%E6%95%B4%E5%90%88%E5%8C%85%20XZ/%E5%AE%8C%E6%95%B4%E5%8C%85/TensenType%EF%BC%88%E8%85%BE%E7%A5%A5%EF%BC%89/%E7%AE%80%E7%B9%81) 和 [Noto Sans CJK SC](https://github.com/notofonts/noto-cjk/tree/main/Sans#downloading-noto-sans-cjk) 两种字体，各位请自行下载安装。
 
 ## 着色器 脚本
 
@@ -56,6 +60,7 @@ include = "~~/profiles.conf"
 | [quality-menu](https://github.com/christoph-heinrich/mpv-quality-menu) | 运行时更改在线音视频流质量的菜单 | 在 mpv.conf 中写一行 `--script-opts-append=ytdl_hook-all_formats=yes` 可以部分代替这个脚本，参见 https://mpv.io/manual/master/#options-all-formats |
 | [file-browser](https://github.com/CogentRedTester/mpv-file-browser) | 简单的文件浏览器 | 需手动在 `~~/scripts` 目录（在Linux上可以 `cd ~/.config/mpv/scripts`）运行 `git clone https://github.com/CogentRedTester/mpv-file-browser.git file-browser` 以“安装” <br> 以后更新在 `~~/scripts/file-browser` 目录运行 `git pull` 即可 <br> --- <br> 如果和我一样想用 Git 来备份配置文件，请参考Git官方文档 [7.11 Git 工具 - 子模块](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97) <br> --- <br> 需要自行配置 scripts-opts/file_browser.conf 中的 root=，详见：https://github.com/CogentRedTester/mpv-file-browser/blob/master/docs/file_browser.conf |
 | [MPV-Play-BiliBili-Comments (bilibiliAssert)](https://github.com/itKelis/MPV-Play-BiliBili-Comments) | 将B站xml格式弹幕转换为ass格式 | ~~需要 [Play-With-MPV](https://github.com/LuckyPuppy514/Play-With-MPV)~~ 现已兼容 [yt-dlp](https://github.com/yt-dlp/yt-dlp) |
+| [sub-fonts-dir-auto.lua](https://github.com/fbriere/mpv-scripts/blob/master/scripts/sub-fonts-dir-auto.lua) | 自动加载播放文件下的字体目录 |  Doc: https://github.com/fbriere/mpv-scripts/blob/master/doc/sub-fonts-dir-auto.md <br> 会覆盖 `~~/fonts` 目录 |
 
 <details>
 <summary><strong><code>[点击展开] 曾经用过但不常用的脚本，已移除/考虑未来移除</code></strong></summary>
