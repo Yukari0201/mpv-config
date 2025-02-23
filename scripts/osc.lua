@@ -1557,8 +1557,8 @@ layouts["slimbox"] = function ()
     -- styles
     local styles = {
         box = "{\\rDefault\\blur0\\bord1\\1c&H000000\\3c&HFFFFFF}",
-        timecodes = "{\\1c&HFFFFFF\\3c&H000000\\fs20\\bord2\\blur1}",
-        tooltip = "{\\1c&HFFFFFF\\3c&H000000\\fs12\\bord1\\blur0.5}",
+        timecodes = "{\\1c&HFFFFFF\\3c&H691F69\\fs20\\bord2\\blur1}",
+        tooltip = "{\\1c&HFFFFFF\\3c&H691F69\\fs12\\bord1\\blur0.5}",
     }
 
 
