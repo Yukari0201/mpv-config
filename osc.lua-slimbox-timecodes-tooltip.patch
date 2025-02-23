@@ -1,0 +1,31 @@
+From 6a6ad35de8dda80d0fab40a575a57d7ce682470b Mon Sep 17 00:00:00 2001
+From: Yukari0201 <130890393+Yukari0201@users.noreply.github.com>
+Date: Sun, 23 Feb 2025 15:45:33 +0800
+Subject: [PATCH] =?UTF-8?q?osc.lua:=20slimbox:=20=E6=9B=B4=E6=94=B9=20time?=
+ =?UTF-8?q?codes=20tooltip=20=E7=9A=84=E8=BE=B9=E6=A1=86=E9=A2=9C=E8=89=B2?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ scripts/osc.lua | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/scripts/osc.lua b/scripts/osc.lua
+index 37791b0..8650144 100644
+--- a/scripts/osc.lua
++++ b/scripts/osc.lua
+@@ -1557,8 +1557,8 @@ layouts["slimbox"] = function ()
+     -- styles
+     local styles = {
+         box = "{\\rDefault\\blur0\\bord1\\1c&H000000\\3c&HFFFFFF}",
+-        timecodes = "{\\1c&HFFFFFF\\3c&H000000\\fs20\\bord2\\blur1}",
+-        tooltip = "{\\1c&HFFFFFF\\3c&H000000\\fs12\\bord1\\blur0.5}",
++        timecodes = "{\\1c&HFFFFFF\\3c&H691F69\\fs20\\bord2\\blur1}",
++        tooltip = "{\\1c&HFFFFFF\\3c&H691F69\\fs12\\bord1\\blur0.5}",
+     }
+ 
+ 
+-- 
+2.48.1
+
