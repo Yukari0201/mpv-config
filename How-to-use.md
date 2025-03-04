@@ -8,7 +8,7 @@ cd ~/.config/mpv
 git clone --recurse-submodules https://github.com/Yukari0201/mpv-config.git .
 ```
 
-然后根据自己的设备自行修改相关选项(见下)
+### 然后根据自己的设备自行修改相关选项(见下)
 
 (Tips: 命令行运行 `mpv --vulkan-device=help` 会列出所有可用的设备)
 
@@ -43,7 +43,14 @@ git checkout windows
 ```
 ### [scoop](https://scoop.sh/) 用户
 
-前提条件：安装了 `extras/mpv-git`
+前提条件：安装了 `git` 和 `mpv-git`  
+安装方式：
+```
+scoop install git
+scoop bucket add extras
+scoop install mpv-git
+```
+
 
 scoop 应用安装文件夹一般在 `C:\\Users\<你的用户名>\scoop`
 ```
@@ -52,7 +59,7 @@ git clone --recurse-submodules https://github.com/Yukari0201/mpv-config.git .
 git checkout windows
 ```
 
-然后根据自己的设备自行修改相关选项(见下)
+### 然后根据自己的设备自行修改相关选项(见下)
 
 (Tips: 命令行运行 `mpv --d3d11-adapter=help` 和 `mpv --vulkan-device=help` 会列出所有可用的设备)
 
