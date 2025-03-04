@@ -57,11 +57,10 @@ include = "~~/profiles.conf"
 
 </details>
 
-### 用到的[脚本](./scripts/)
+### 用到的[第三方脚本](./scripts/)
 
 | 脚本 | 用途 | 补充说明 |
 | ---- | ---- | ------- |
-| [Playlistmanager](https://github.com/jonniek/mpv-playlistmanager) | 播放列表增强 |  |
 | [osc.lua](./scripts/osc.lua) |（见下） | [mpv的内置OSC](https://github.com/mpv-player/mpv/blob/master/player/lua/osc.lua) [添加了 thumbfast 支持](https://github.com/po5/thumbfast/blob/vanilla-osc/player/lua/osc.lua) <br> 并打入了我的个性化 [patch](osc.lua-slimbox-timecodes-tooltip.patch) |
 | [thumbfast](https://github.com/po5/thumbfast) | 在进度条上显示视频缩略图 |  |
 | [quality-menu](https://github.com/christoph-heinrich/mpv-quality-menu) | 运行时更改在线音视频流质量的菜单 | 在 mpv.conf 中写一行 `--script-opts-append=ytdl_hook-all_formats=yes` 可以部分代替这个脚本，参见 https://mpv.io/manual/master/#options-all-formats |
@@ -74,6 +73,7 @@ include = "~~/profiles.conf"
 
 | 脚本 | 用途 | 补充说明 |
 | ---- | ---- | ------- |
+| [Playlistmanager](https://github.com/jonniek/mpv-playlistmanager) | 播放列表增强 | 可被 [select.lua](https://mpv.io/manual/master/#select) 代替(快捷键：`g-p`) |
 | [~~autoload~~](https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) | 自动添加同目录的文件到播放列表 | 已被 [`--autocreate-playlist`](https://mpv.io/manual/master/#options-autocreate-playlist) 代替 <br> --- <br> Playlistmanager 可以代替 autoload，参见 [playlistmanager.conf](https://github.com/jonniek/mpv-playlistmanager/blob/master/playlistmanager.conf) 中的 `loadfiles_on_start` 和 `key_loadfiles` <br> |
 | [~~webm~~](https://github.com/ekisu/mpv-webm) | 用于裁剪视频片段 | 输出文件较大时性能表现不理想；我不常用 |
 | [~~webm-zh~~](https://github.com/FinnRaze/mpv-webm-zh) | webm 的汉化版 | 同上 |
