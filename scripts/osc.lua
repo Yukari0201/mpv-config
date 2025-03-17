@@ -95,7 +95,7 @@ local osc_styles = {
     elementDown = "{\\1c&H999999}",
     timecodes = "{\\blur0\\bord0\\1c&HFFFFFF\\3c&HFFFFFF\\fs20}",
     vidtitle = "{\\blur0\\bord0\\1c&HFFFFFF\\3c&HFFFFFF\\fs12\\q2}",
-    box = "{\\rDefault\\blur0\\bord1\\1c&H000000\\3c&HFFFFFF}",
+    box = "{\\rDefault\\blur0\\bord1\\1c&H000000\\3c&H691F69}",
 
     topButtonsBar = "{\\blur0\\bord0\\1c&HFFFFFF\\3c&HFFFFFF\\fs18\\fnmpv-osd-symbols}",
     smallButtonsBar = "{\\blur0\\bord0\\1c&HFFFFFF\\3c&HFFFFFF\\fs28\\fnmpv-osd-symbols}",
