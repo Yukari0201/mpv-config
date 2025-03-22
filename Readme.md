@@ -73,7 +73,7 @@ include = "~~/profiles.conf"
 
 | 脚本 | 用途 | 补充说明 |
 | ---- | ---- | ------- |
-| [Playlistmanager](https://github.com/jonniek/mpv-playlistmanager) | 播放列表增强 | 可被 [select.lua](https://mpv.io/manual/master/#select) 代替(快捷键：`g-p`) |
+| [~~Playlistmanager~~](https://github.com/jonniek/mpv-playlistmanager) | 播放列表增强 | 可被 [select.lua](https://mpv.io/manual/master/#select) 代替(快捷键：`g-p`) |
 | [~~autoload~~](https://github.com/mpv-player/mpv/blob/master/TOOLS/lua/autoload.lua) | 自动添加同目录的文件到播放列表 | 已被 [`--autocreate-playlist`](https://mpv.io/manual/master/#options-autocreate-playlist) 代替 <br> --- <br> Playlistmanager 可以代替 autoload，参见 [playlistmanager.conf](https://github.com/jonniek/mpv-playlistmanager/blob/master/playlistmanager.conf) 中的 `loadfiles_on_start` 和 `key_loadfiles` <br> |
 | [~~webm~~](https://github.com/ekisu/mpv-webm) | 用于裁剪视频片段 | 输出文件较大时性能表现不理想；我不常用 |
 | [~~webm-zh~~](https://github.com/FinnRaze/mpv-webm-zh) | webm 的汉化版 | 同上 |
