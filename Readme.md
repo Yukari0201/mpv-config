@@ -108,3 +108,7 @@ include = "~~/profiles.conf"
 - FinnRaze https://github.com/FinnRaze/mpv-player-config
 - GreatRunoob https://github.com/GreatRunoob/mpv-configuration
 - ...
+
+## 本人的拙作（如果你不嫌弃，可以参考一下）
+
+- [优化 mpv 播放器的在线视频体验](https://yukari0201.github.io/2025-02-08/mpv-streaming-media/)
