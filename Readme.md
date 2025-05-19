@@ -67,6 +67,7 @@ include = "~~/profiles.conf"
 | [file-browser](https://github.com/CogentRedTester/mpv-file-browser) | 简单的文件浏览器 | 需手动在 `~~/scripts` 目录（在Linux上可以 `cd ~/.config/mpv/scripts`）运行 `git clone https://github.com/CogentRedTester/mpv-file-browser.git file-browser` 以“安装” <br> 以后更新在 `~~/scripts/file-browser` 目录运行 `git pull` 即可 <br> --- <br> 如果和我一样想用 Git 来备份配置文件，请参考Git官方文档 [7.11 Git 工具 - 子模块](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97) <br> --- <br> 需要自行配置 scripts-opts/file_browser.conf 中的 root=，详见：https://github.com/CogentRedTester/mpv-file-browser/blob/master/docs/file_browser.conf |
 | [MPV-Play-BiliBili-Comments (bilibiliAssert)](https://github.com/itKelis/MPV-Play-BiliBili-Comments) | 将B站xml格式弹幕转换为ass格式 | ~~需要 [Play-With-MPV](https://github.com/LuckyPuppy514/Play-With-MPV)~~ 现已兼容 [yt-dlp](https://github.com/yt-dlp/yt-dlp) |
 | [sub-fonts-dir-auto.lua](https://github.com/fbriere/mpv-scripts/blob/master/scripts/sub-fonts-dir-auto.lua) | 自动加载播放文件下的字体目录 |  Doc: https://github.com/fbriere/mpv-scripts/blob/master/doc/sub-fonts-dir-auto.md <br> 会覆盖 `~~/fonts` 目录 |
+| [inputevent.lua](https://github.com/natural-harmonia-gropius/input-event) | 增强 mpv 的 input.conf | 我用此脚本实现两个功能（详细参见 [input.conf](input.conf)）： <br> 长按右方向键倍速播放，释放恢复 <br> 单击鼠标左键暂停，双击全屏 |
 
 <details>
 <summary><strong><code>[点击展开] 曾经用过但不常用的脚本，已移除/考虑未来移除</code></strong></summary>
