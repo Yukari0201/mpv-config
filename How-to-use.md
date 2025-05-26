@@ -41,6 +41,12 @@ cd <你的 mpv 安装目录>
 git clone --recurse-submodules https://github.com/Yukari0201/mpv-config.git portable_config
 git checkout windows
 ```
+
+由于我可能不会及时更新 windows 分支的内容，所以推荐各位 `git checkout windows` 后手动运行如下命令，同步 main 分支的内容
+```
+git merge main
+```
+
 ### [scoop](https://scoop.sh/) 用户
 
 前提条件：安装了 `git` 和 `mpv-git`  
@@ -57,6 +63,11 @@ scoop 应用安装文件夹一般在 `C:\\Users\<你的用户名>\scoop`
 cd <scoop 应用安装文件夹>\persist\mpv-git\portable_config
 git clone --recurse-submodules https://github.com/Yukari0201/mpv-config.git .
 git checkout windows
+```
+
+由于我可能不会及时更新 windows 分支的内容，所以推荐各位 `git checkout windows` 后手动运行如下命令，同步 main 分支的内容
+```
+git merge main
 ```
 
 ### 然后根据自己的设备自行修改相关选项(见下)
