@@ -11,6 +11,8 @@
 
 如果你非要使用我的配置(~~自寻不快~~)，请看 [How to use? | 如何使用？](How-to-use.md)
 
+并且建议安装[推荐字体](#字体)
+
 ## [mpv.conf](./mpv.conf)
 
 排版以 VSCode/VSCodium + Noto Sans Mono CJK SC 为准。
@@ -33,7 +35,7 @@ include = "~~/profiles.conf"
 
 ## 字体
 
-我的配置文件用到了 [汉仪正圆-65S](https://pan.acgrip.com/?dir=%E8%B6%85%E7%BA%A7%E5%AD%97%E4%BD%93%E6%95%B4%E5%90%88%E5%8C%85%20XZ/%E5%AE%8C%E6%95%B4%E5%8C%85/Hanyi%20Fonts%EF%BC%88%E6%B1%89%E4%BB%AA%EF%BC%89/%E7%AE%80%E7%B9%81) 和 [Noto Sans CJK SC & Noto Sans CJK SC Mono](https://github.com/notofonts/noto-cjk/tree/main/Sans#downloading-noto-sans-cjk) 字体，各位请自行下载安装。
+我的配置文件用到了 [汉仪正圆-65S](https://pan.acgrip.com/?dir=%E8%B6%85%E7%BA%A7%E5%AD%97%E4%BD%93%E6%95%B4%E5%90%88%E5%8C%85%20XZ/%E5%AE%8C%E6%95%B4%E5%8C%85/Hanyi%20Fonts%EF%BC%88%E6%B1%89%E4%BB%AA%EF%BC%89/%E7%AE%80%E7%B9%81), [Noto Sans CJK SC 和 Noto Sans CJK SC Mono](https://github.com/notofonts/noto-cjk/tree/main/Sans#downloading-noto-sans-cjk) 字体，各位请自行下载安装。
 
 ## 着色器 脚本
 
