@@ -1,4 +1,5 @@
-cache/
-watch_later/
-cookies.txt
-device.conf
+/cache/
+/watch_later/
+/cookies.txt
+/device.conf
+/script-opts/file_browser.conf
