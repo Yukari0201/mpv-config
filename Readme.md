@@ -4,34 +4,16 @@
 
 主要用于 Arch Linux  
 
+排版以 VSCode/VSCodium + Noto Sans Mono CJK SC 为准。
+
 ## 如何使用？
 
 首先，我**不推荐**你直接使用我的配置文件。  
 我建议你根据我的配置文件的注释以及文末[推荐阅读](#推荐阅读)的文章来自行定制自己的配置文件。
 
-如果你非要使用我的配置(~~自寻不快~~)，请看 [How to use? | 如何使用？](How-to-use.md)
+如果你非要使用我的配置(~~自寻不快~~)，~~请看 [How to use? | 如何使用？](How-to-use.md)~~ 已过时，请等待本人重写
 
 并且建议安装[推荐字体](#字体)
-
-## [mpv.conf](./mpv.conf)
-
-排版以 VSCode/VSCodium + Noto Sans Mono CJK SC 为准。
-
-最初是基于 [MPV_lazy main分支](https://github.com/hooke007/MPV_lazy/blob/main/portable_config/mpv.conf) 魔改而来。
-
-### [profiles.conf](./profiles.conf)
-
-mpv.conf
-
-```ini
-include = "~~/profiles.conf"
-```
-
-用来放置 普通 profile 和 auto profile，避免干扰到默认配置
-
-## [input.conf](./input.conf)
-
-只是加了着色器相关的内容，以及亿点点个性化改动（
 
 ## 字体
 
