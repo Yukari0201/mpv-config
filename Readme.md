@@ -96,5 +96,5 @@
 
 ## 本人的拙作（如果你不嫌弃，可以参考一下）
 
-- [优化 mpv 播放器的在线视频体验](https://yukari0201.github.io/2025-02-08/mpv-streaming-media/) | [Bilibili 版本（**不会**及时更新）](https://www.bilibili.com/read/cv40918035)
-- [为 mpv 播放器添加长按倍速功能](https://yukari0201.github.io/2025-05-22/Adding-Long-Press-Speed-Control-to-mpv-Player/) | [Bilibili 版本（**不会**及时更新）](https://www.bilibili.com/read/cv41770211)
+- [优化 mpv 播放器的在线视频体验](https://yukari0201.github.io/posts/mpv-streaming-media/) | [Bilibili 版本（**不会**及时更新）](https://www.bilibili.com/read/cv40918035)
+- [为 mpv 播放器添加长按倍速功能](https://yukari0201.github.io/posts/adding-long-press-speed-control-to-mpv-player/) | [Bilibili 版本（**不会**及时更新）](https://www.bilibili.com/read/cv41770211)
