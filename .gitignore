@@ -2,4 +2,6 @@
 /watch_later/
 /cookies.txt
 /device.conf
+/proxy.conf
 /script-opts/file_browser.conf
+/.luarc.json
