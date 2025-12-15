@@ -1,3 +1,6 @@
 [submodule "scripts/file-browser"]
 	path = scripts/file-browser
 	url = https://github.com/CogentRedTester/mpv-file-browser.git
+[submodule "bilibiliAssert"]
+	path = bilibiliAssert
+	url = https://github.com/itKelis/MPV-Play-BiliBili-Comments.git
