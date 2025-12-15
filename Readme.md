@@ -41,15 +41,15 @@
 
 </details>
 
-### 用到的[第三方脚本](./scripts/)
+### 用到的第三方脚本（[scripts](./scripts/) & [scripts-git](./scripts-git/)）
 
 | 脚本 | 用途 | 补充说明 |
-| ---- | ---- | ------- |
+| :---: | ---- | ------- |
 | [osc.lua](./scripts/osc.lua) |（见下） | [mpv的内置OSC](https://github.com/mpv-player/mpv/blob/master/player/lua/osc.lua) [添加了 thumbfast 支持](https://github.com/po5/thumbfast/blob/vanilla-osc/player/lua/osc.lua) <br> 并增加了一点样式上的个性化改动([6a6ad35](https://github.com/Yukari0201/mpv-config/commit/6a6ad35de8dda80d0fab40a575a57d7ce682470b), [53c8f23](https://github.com/Yukari0201/mpv-config/commit/53c8f2308a3fd2ff61fbe5262fb7de881de40982)) |
 | [thumbfast](https://github.com/po5/thumbfast) | 在进度条上显示视频缩略图 |  |
-| [quality-menu](https://github.com/christoph-heinrich/mpv-quality-menu) | 运行时更改在线音视频流质量的菜单 | 在 mpv.conf 中写一行 `--script-opts-append=ytdl_hook-all_formats=yes` 可以部分代替这个脚本，参见 https://mpv.io/manual/master/#options-all-formats |
+| [quality-menu](https://github.com/christoph-heinrich/mpv-quality-menu) | 运行时更改在线音视频流质量的菜单 | 在 mpv.conf 中写一行 `--script-opts-append=ytdl_hook-all_formats=yes` 可以部分代替这个脚本，参见 https://mpv.io/manual/master/#options-all-formats <br> 我个人**使用 git submodule 进行管理** |
 | [file-browser](https://github.com/CogentRedTester/mpv-file-browser) | 简单的文件浏览器 | **如果自行安装**，需手动在 `~~/scripts` 目录（在Linux上可以 `cd ~/.config/mpv/scripts`）运行 `git clone https://github.com/CogentRedTester/mpv-file-browser.git file-browser` 以“安装” <br> 以后更新在 `~~/scripts/file-browser` 目录运行 `git pull` 即可 <br> --- <br> 如果和我一样想用 Git 来备份配置文件，请参考Git官方文档 [7.11 Git 工具 - 子模块](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97) <br> --- <br> 需要自行配置 scripts-opts/file_browser.conf 中的 root=，详见：https://github.com/CogentRedTester/mpv-file-browser/blob/master/docs/file_browser.conf |
-| [MPV-Play-BiliBili-Comments (bilibiliAssert)](https://github.com/itKelis/MPV-Play-BiliBili-Comments) | 将B站xml格式弹幕转换为ass格式 | ~~需要 [Play-With-MPV](https://github.com/LuckyPuppy514/Play-With-MPV)~~ 现已兼容 [yt-dlp](https://github.com/yt-dlp/yt-dlp) |
+| [MPV-Play-BiliBili-Comments (bilibiliAssert)](https://github.com/itKelis/MPV-Play-BiliBili-Comments) | 将B站xml格式弹幕转换为ass格式 | ~~需要 [Play-With-MPV](https://github.com/LuckyPuppy514/Play-With-MPV)~~ 现已兼容 [yt-dlp](https://github.com/yt-dlp/yt-dlp) <br> 我个人**使用 git submodule 进行管理** |
 | [sub-fonts-dir-auto.lua](https://github.com/fbriere/mpv-scripts/blob/master/scripts/sub-fonts-dir-auto.lua) | 自动加载播放文件下的字体目录 |  Doc: https://github.com/fbriere/mpv-scripts/blob/master/doc/sub-fonts-dir-auto.md <br> 会覆盖 `~~/fonts` 目录 |
 | [inputevent.lua](https://github.com/natural-harmonia-gropius/input-event) | 增强 mpv 的 input.conf | 我用此脚本实现两个功能（详细参见 [input.conf](input.conf)）： <br> 长按右方向键倍速播放，释放恢复 <br> 单击鼠标左键暂停，双击全屏 |
 
