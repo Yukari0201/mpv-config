@@ -45,7 +45,7 @@
 
 | 脚本 | 用途 | 补充说明 |
 | :---: | ---- | ------- |
-| [osc.lua](./scripts/osc.lua) |（见下） | [mpv的内置OSC](https://github.com/mpv-player/mpv/blob/master/player/lua/osc.lua) [添加了 thumbfast 支持](https://github.com/po5/thumbfast/blob/vanilla-osc/player/lua/osc.lua) <br> 并增加了一点样式上的个性化改动([6a6ad35](https://github.com/Yukari0201/mpv-config/commit/6a6ad35de8dda80d0fab40a575a57d7ce682470b), [53c8f23](https://github.com/Yukari0201/mpv-config/commit/53c8f2308a3fd2ff61fbe5262fb7de881de40982)) |
+| [osc.lua](https://github.com/Yukari0201/mpv-osc-thumbfast/blob/main/osc.lua) |（见下） | [mpv的内置OSC](https://github.com/mpv-player/mpv/blob/master/player/lua/osc.lua) 添加了 thumbfast 支持，另有一些微不足道的改动 <br> 参考甚至很大一部分程度上复制了 [thumbfast 的 vanilla-osc 分支](https://github.com/po5/thumbfast/blob/vanilla-osc/player/lua/osc.lua)  |
 | [thumbfast](https://github.com/po5/thumbfast) | 在进度条上显示视频缩略图 |  |
 | [quality-menu](https://github.com/christoph-heinrich/mpv-quality-menu) | 运行时更改在线音视频流质量的菜单 | 在 mpv.conf 中写一行 `--script-opts-append=ytdl_hook-all_formats=yes` 可以部分代替这个脚本，参见 https://mpv.io/manual/master/#options-all-formats <br> 我个人**使用 git submodule 进行管理** |
 | [file-browser](https://github.com/CogentRedTester/mpv-file-browser) | 简单的文件浏览器 | **如果自行安装**，需手动在 `~~/scripts` 目录（在Linux上可以 `cd ~/.config/mpv/scripts`）运行 `git clone https://github.com/CogentRedTester/mpv-file-browser.git file-browser` 以“安装” <br> 以后更新在 `~~/scripts/file-browser` 目录运行 `git pull` 即可 <br> --- <br> 如果和我一样想用 Git 来备份配置文件，请参考Git官方文档 [7.11 Git 工具 - 子模块](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97) <br> --- <br> 需要自行配置 scripts-opts/file_browser.conf 中的 root=，详见：https://github.com/CogentRedTester/mpv-file-browser/blob/master/docs/file_browser.conf |
