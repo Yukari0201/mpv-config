@@ -35,8 +35,8 @@
 
 | 名称 | 链接 |
 | --- | --- |
-| ACNet | https://github.com/TianZerL/ACNetGLSL |
-| AMD-FSR | https://gist.github.com/agyild/82219c545228d70c5604f865ce0b0ce5 |
+| ~~ACNet~~ | https://github.com/TianZerL/ACNetGLSL |
+| ~~AMD-FSR~~ | https://gist.github.com/agyild/82219c545228d70c5604f865ce0b0ce5 |
 | ~~antiring.hook~~ | https://github.com/haasn/gentoo-conf/blob/xor/home/nand/.mpv/shaders/antiring.hook |
 
 </details>
