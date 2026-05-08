@@ -1,5 +1,8 @@
 # How to use? | 如何使用？
 
+> [!IMPORTANT]
+> 有关 vapoursynth 的部分，请操作完本文内容后再参考 [vs/README](vs/README.md)
+
 ## Linux
 
 - 在安装完成 mpv 和 git 后，运行：

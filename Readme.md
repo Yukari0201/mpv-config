@@ -80,7 +80,7 @@
 - https://www.bilibili.com/read/readlist/rl617174 - 略有过时
 - https://github.com/stax76/awesome-mpv
 - https://artoriuz.github.io/blog/mpv_upscaling.html
-- https://forum.archlinuxcn.org/t/topic/15389
+- https://www.bilibili.com/opus/1143203531262525449
 - ...
 
 ### 别人的配置文件，可以用来参考

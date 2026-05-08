@@ -17,7 +17,7 @@ clip = core.resize.Bicubic(clip, width=w, height=h, format=vs.RGBS, matrix_in_s=
 
 clip = vsmlrt.RIFE(
     clip,
-    model=42,  # 模型版本
+    model=4251,  # 模型版本
     multi=2,  # 补帧倍速
     backend=vsmlrt.Backend.TRT(  # 使用的后端
         engine_folder=os.environ.get("HOME") + "/.cache/mpv/vapoursynth",  # .engine 文件目录
