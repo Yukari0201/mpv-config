@@ -7,11 +7,11 @@ clip = video_in
 
 w, h = clip.width, clip.height
 # 向上取整：1920*1080>===>1920*1152
-# w = ((w + 127) // 128) * 128
-# h = ((h + 127) // 128) * 128
+w = ((w + 127) // 128) * 128
+h = ((h + 127) // 128) * 128
 # 向下取整：1920*1080>===>1920*1024
-w = (w // 128) * 128
-h = (h // 128) * 128
+# w = (w // 128) * 128
+# h = (h // 128) * 128
 
 clip = core.resize.Bicubic(clip, width=w, height=h, format=vs.RGBS, matrix_in_s="709")
 
@@ -20,7 +20,7 @@ clip = vsmlrt.RIFE(
     model=4251,  # 模型版本
     multi=2,  # 补帧倍速
     backend=vsmlrt.Backend.TRT(  # 使用的后端
-        engine_folder=os.environ.get("HOME") + "/.cache/mpv/vapoursynth",  # .engine 文件目录
+        engine_folder = os.path.join(os.path.expanduser("~"), ".cache", "mpv", "vapoursynth"),  # .engine 文件目录
         device_id=0,  # 使用的显卡序号：0=第一张显卡
         workspace=None,  # 分配显存的大小：None=自动
         num_streams=4,  # 显卡线程数：1~8
@@ -32,7 +32,7 @@ clip = vsmlrt.RIFE(
         # use_cudnn=True,  # 是否使用cuDNN库：优化卷积神经网络
         # use_edge_mask_convolutions=True,  # 是否使用边缘掩码卷积：降低性能但减少模糊和重影
         # use_jit_convolutions=True,  # 是否使用即时编译卷积：提升性能但会增加编译时间
-        # static_shape=True,  # 是否使用即时编译卷积：提升性能但会增加编译时间
+        static_shape=True,  # 是否使用即时编译卷积：提升性能但会增加编译时间
         # heuristic=True,  # 是否使用启发式算法：TRT自动选择最佳算法
         # short_path=True,  # 是否使用短路径优化：减少重复计算
         # builder_optimization_level=5,  # 构建器优化等级：0~5
