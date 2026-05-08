@@ -38,7 +38,8 @@
           - 解压 vsmlrt-windows-x64-tensorrt.<version>.7z.* 到 `C:\Program Files\VapourSynth\plugins`
           - Tip: 其实符号链接也可以用哒，我让AI写了一个脚本，见 [syslink.ps1](../syslink.ps1)  
             **记得改 `$SourceDir` ！！！**
-          - 将 `vsmlrt.py` 符号链接到 `C:\ProgramData\scoop\persist\python\Lib\site-packages\vsmlrt.py`
+          - 将 `vsmlrt.py` 符号链接到 `C:\ProgramData\scoop\persist\python\Lib\site-packages\vsmlrt.py`  
+            **！！！如果使用了 `syslink.ps1` ，请将 `C:\Program Files\VapourSynth\plugins\vsmlrt\vsmlrt.py` 更改为你的 `vsmlrt.py` 的实际路径！！！**
             ```pwsh
             sudo pwsh -c 'New-Item -ItemType SymbolicLink -Path "C:\ProgramData\scoop\persist\python\Lib\site-packages\vsmlrt.py" -Target "C:\Program Files\VapourSynth\plugins\vsmlrt\vsmlrt.py"'
             ```
