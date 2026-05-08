@@ -15,7 +15,7 @@ clip = core.resize.Bicubic(clip, width=w, height=h, format=vs.RGBS, matrix_in_s=
 
 clip = core.rife.RIFE(
     clip,
-    model=15,  # 模型版本
+    model=70,  # 模型版本
     factor_num=2,  # 补帧倍速
     gpu_id=1,  # 使用的显卡序号：0=第一张显卡
     gpu_thread=1,  # 显卡线程数：1~8
