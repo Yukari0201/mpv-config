@@ -2,16 +2,17 @@ import vapoursynth as vs
 from vapoursynth import core
 
 clip = video_in
+source_fmt = clip.format
 
-w, h = clip.width, clip.height
+src_w, src_h = clip.width, clip.height
 # 向上取整：1920*1080>===>1920*1088
-w = ((w + 63) // 64) * 64
-h = ((h + 63) // 64) * 64
+w = ((src_w + 63) // 64) * 64
+h = ((src_h + 63) // 64) * 64
 # 向下取整：1920*1080>===>1920*1024
-# w = (w // 64) * 64
-# h = (h // 64) * 64
+# w = (src_w // 64) * 64
+# h = (src_h // 64) * 64
 
-clip = core.resize.Bicubic(clip, width=w, height=h, format=vs.RGBS, matrix_in_s="709")
+clip = core.resize.Bilinear(clip, width=w, height=h, format=vs.RGBS, matrix_in_s="709")
 
 clip = core.rife.RIFE(
     clip,
@@ -26,7 +27,7 @@ clip = core.rife.RIFE(
     skip_threshold=60,  # 跳过插入静态帧的检测阈值：默认60
 )
 
-clip = core.resize.Bicubic(clip, format=vs.YUV420P10, matrix_s="709")
+clip = core.resize.Bilinear(clip, width=src_w, height=src_h, format=(source_fmt if source_fmt else vs.YUV420P10), matrix_s="709")
 
 clip.set_output()
 
