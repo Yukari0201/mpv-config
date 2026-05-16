@@ -1,4 +1,3 @@
-import os
 import vapoursynth as vs
 from vapoursynth import core
 import vsmlrt
@@ -20,17 +19,11 @@ clip = vsmlrt.RIFE(
     clip,
     model=4251,  # 模型版本
     multi=2,  # 补帧倍速
-    backend=vsmlrt.BackendV2.TRT(  # 使用的后端
-        engine_folder = os.path.join(os.path.expanduser("~"), ".cache", "mpv", "vapoursynth"),  # .engine 文件目录
-        device_id=0,  # 使用的显卡序号：0=第一张显卡
-        workspace=None,  # 分配显存的大小：None=自动
-        num_streams=4,  # 显卡线程数：1~8
-        fp16=True,  # 是否使用fp16加速：提升性能但会轻微降低质量
-        force_fp16=True,  # 强制使用fp16精度
-        use_cuda_graph=True,  # 是否使用cuda加速
-        # use_cublas=False,  # 是否使用cuBLAS库：优化矩阵运算
-        # use_cudnn=False,  # 是否使用cuDNN库：优化卷积神经网络
-        static_shape=True,  # 是否使用即时编译卷积：提升性能但会增加编译时间
+    backend=vsmlrt.BackendV2.ORT_DML(  # 使用的后端
+        device_id=1,
+        num_streams=1,
+        fp16=True,
+        output_format=1,
     ),
 )
 
